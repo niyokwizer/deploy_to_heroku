@@ -1,0 +1,16 @@
+<h1>Update member</h1>
+
+<form action="updaterecord/{{ mymember.id }}" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %} title: <input type="text" name="title" value="{{mymember.title}}"><br>
+    <label for="">release_date: <input type="date" name="release_date_" value="{{mymember.release_date}}" ></label><br>
+    <label for="">main actor : <input type="text" name="main_actor" value="{{ mymember.main_actor}}" ></label><br>
+    <label for="">genre: <input type="text" name="genre"value="{{mymember.genre}}" ></label><br>
+    <label for="">movies: <input type="text" name="video" value="{{mymember.video}}"></label><br>
+    <label for="">thumbnail : <input type="text" name="thumbnail" value="{{mymember.thumbnail}}"></label><br>
+    <label for="">description <input type="text" name="description" id="" style="width: 500px; height:100px;" cols="30" rows="10" value="{{mymember.descripltion}}" ></label><br>
+    <label for="">URL : <input type="text" name="url" value="{{mymember.url}}"></label><br>
+    <label for=""> <input type="hidden" name="user_id" value="{{user.id}}"></label><br>
+    <label for=""><input type="submit" name="submit"></label><br>
+</form>
+</form>

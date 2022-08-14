@@ -1,0 +1,14 @@
+<h3 style="text-align: center; font-size: 50px; font-family: 'Times New Roman', Times, serif;">Register here</h3>
+<hr>
+
+<form style=" font-size: 40px; background-color: bisque; " action=" " method="POST " enctype="multipart/form-data ">
+    {% csrf_token %} {% for field in form %}
+    <div>
+        <p>{{ field.label }}: <br> {{ field }}</p>
+
+        {% for error in field.errors %}
+        <small style="color: red ">{{ error }}</small> {% endfor %}
+    </div>
+    {% endfor %}
+    <button style="color: blue; font-size: 30px;" type="submit">Register</button>
+</form>
