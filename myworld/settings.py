@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x$rps8%jfwe-$nr@=$g0@ckbz*sbkwtd96+*!2j62v4l7met9w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://good-movie-site.herokuapp.com']
 
 
 # Application definition
@@ -77,10 +77,14 @@ WSGI_APPLICATION = 'myworld.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'dehkr6bi70kslc',
+       'USER': 'xsslpdsnxfldtv',
+       'PASSWORD': 'e95982a762d77fe9c4c457aa3f2d0aad3d1faeed0be5aab03698e0e3ec98769e',
+       'HOST': 'ec2-34-193-44-192.compute-1.amazonaws.com',
+       'PORT': '5432',
+   }
 }
 
 
