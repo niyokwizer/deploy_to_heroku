@@ -146,8 +146,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_REDIRECT_URL = 'home'
-<<<<<<< HEAD
 django_heroku.settings(locals())
-=======
-django_heroku.settings(locals())
->>>>>>> 4d7e9edc3c5936805fc75467beeda16a317a9141
