@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from email.mime import image
 from pathlib import Path
 import os .path
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-x$rps8%jfwe-$nr@=$g0@ckbz*sbkwtd96+*!2j62v4l7met9w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://good-movie-site.herokuapp.com']
+ALLOWED_HOSTS = ['good-movie-site.herokuapp.com']
 
 
 # Application definition
@@ -79,10 +81,10 @@ WSGI_APPLICATION = 'myworld.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'dehkr6bi70kslc',
-       'USER': 'xsslpdsnxfldtv',
-       'PASSWORD': 'e95982a762d77fe9c4c457aa3f2d0aad3d1faeed0be5aab03698e0e3ec98769e',
-       'HOST': 'ec2-34-193-44-192.compute-1.amazonaws.com',
+       'NAME': 'd3k5inik76obm5',
+       'USER': 'wthwbrwgtwcdeg',
+       'PASSWORD': 'ab5c97581b39cfef3c8ba787e20b012193e24b9fc57a9c25977616c54af7fd03',
+       'HOST': 'ec2-3-225-110-188.compute-1.amazonaws.com',
        'PORT': '5432',
    }
 }
@@ -144,3 +146,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOGIN_REDIRECT_URL = 'home'
+django_heroku.settings(locals())
